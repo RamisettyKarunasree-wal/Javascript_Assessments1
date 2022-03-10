@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>Destructuring</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      const numbersArray = ["apple", "orange", "peach"];
+      const person = {
+        name: "abcde",
+        age: 10,
+        gender: "m",
+      };
+      const [x, y, z] = numbersArray;
+      const { name, age } = person; //can also witten as {name:name,age:age}=person
+      console.log(`Array Destructuring: ${x},${y}`);
+      console.log(`Object Destructuring: ${name},${age}`);
+    </script>
+  </body>
+</html>

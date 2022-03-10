@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sub Array</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>Sub Array</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      function subArray(arr, n) {
+        let resultArray = arr.filter((value, index) => {
+          if (index >= arr.length - n) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        return resultArray;
+      }
+      const result1 = subArray([1, 2, 3, 4, 5], 2);
+      const result2 = subArray([1, 2, 3], 6);
+      console.log(`Test 1 Output: ${result1}`);
+      console.log(`Test 2 Output: ${result2}`);
+    </script>
+  </body>
+</html>

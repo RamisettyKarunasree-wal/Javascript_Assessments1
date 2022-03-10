@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Update Salaries</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>Update Salaries</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      function updateSalaries(employeesArray, percent) {
+        let resultArray = employeesArray.map((val) => {
+          const hike = (val * percent) / 100;
+          return val + hike;
+        });
+        return resultArray;
+      }
+      const employeesArray = [100, 500, 700, 400];
+      const percent = 10;
+      const result = updateSalaries(employeesArray, percent);
+      console.log(`Updated Salaries: ${result}`);
+    </script>
+  </body>
+</html>

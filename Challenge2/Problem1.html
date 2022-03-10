@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Frequency</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>Frequency of given character in String</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      function findFreq(str, char) {
+        let count = 0;
+        for (let i in str) {
+          if (str[i].toUpperCase() === char || str[i].toLowerCase() === char) {
+            count++;
+          }
+        }
+        return count;
+      }
+      const result1 = findFreq(
+        "How many times does the character occur in this sentence?",
+        "m"
+      );
+      const result2 = findFreq(
+        "How many times does the character occur in this sentence?",
+        "h"
+      );
+      console.log(`Test 1 Output: ${result1}`);
+      console.log(`Test 2 Output: ${result2}`);
+    </script>
+  </body>
+</html>

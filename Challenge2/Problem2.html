@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Equal Elements</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>To check whether all elements in an array are equal</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      function areAllEqual(arr) {
+        let flag = true;
+        for (let i = 0; i < arr.length - 1; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] !== arr[j]) {
+              flag = false;
+              break;
+            }
+          }
+        }
+        return flag;
+      }
+      const result1 = areAllEqual(["test", "test", "test"]);
+      const result2 = areAllEqual([1, 1, 1, 2]);
+      console.log(`Test 1 Output: ${result1}`);
+      console.log(`Test 2 Output: ${result2}`);
+    </script>
+  </body>
+</html>

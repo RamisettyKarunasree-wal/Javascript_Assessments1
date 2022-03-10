@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Spread Operator</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1>Using Spread Operator</h1>
+      <p>Output in console</p>
+    </div>
+    <script>
+      const array1 = [1, 2, 3];
+      const array2 = [4, 5, 6];
+      const basicDetails = {
+        name: "abcde",
+        age: 10,
+        gender: "m",
+      };
+      const educationDetails = {
+        degree: "xyz",
+        college: "anc",
+      };
+      const array3 = [...array1, ...array2];
+      console.log(`Array3: ${array3}`);
+      const personDetails = { ...basicDetails, ...educationDetails };
+      console.log("personDetails:");
+      console.log(personDetails);
+    </script>
+  </body>
+</html>
